@@ -34,7 +34,9 @@ dlMaster() {
 uploadBranch() {
     rn=$(date +%s)
     git branch $rn
+    git checkout $rn
     git add .
+    git commit -m "auto generated push request from script.sh: $rn"
     git push origin $rn
 }
 
